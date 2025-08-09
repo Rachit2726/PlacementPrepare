@@ -6,7 +6,7 @@ export default function Leaderboard() {
     const [data, setData] = useState([]);
 
     useEffect(() => {
-        axios.get('http://localhost:5001/api/leaderboard/global')
+        axios.get('https://placementprepare.onrender.com/api/leaderboard/global')
             .then(res => setData(res.data))
             .catch(() => setData([]));
     }, []);

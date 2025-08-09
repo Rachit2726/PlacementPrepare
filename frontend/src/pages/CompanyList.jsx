@@ -8,7 +8,7 @@ const CompanyList = () => {
     const navigate = useNavigate();
 
     useEffect(() => {
-        fetch("http://localhost:5001/api/company/companies")
+        fetch("https://placementprepare.onrender.com/api/company/companies")
             .then((res) => res.json())
             .then((data) => setCompanies(data))
             .catch((err) => console.error("Error fetching companies:", err));

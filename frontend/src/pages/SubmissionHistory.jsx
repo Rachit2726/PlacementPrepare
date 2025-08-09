@@ -7,7 +7,7 @@ export default function SubmissionHistory() {
 
     const fetchSubs = async () => {
         try {
-            const res = await axios.get('http://localhost:5001/api/history', {
+            const res = await axios.get('https://placementprepare.onrender.com/api/history', {
                 headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }
             });
             setSubs(res.data);

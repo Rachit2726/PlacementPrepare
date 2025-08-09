@@ -13,7 +13,7 @@ export default function CompanyQuestions() {
   useEffect(() => {
     setLoading(true);
     axios
-      .get(`http://localhost:5001/api/company/${companyName}/questions`)
+      .get(`https://placementprepare.onrender.com/api/company/${companyName}/questions`)
       .then((res) => {
         setQuestions(res.data);
         setLoading(false);

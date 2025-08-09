@@ -15,7 +15,7 @@ export default function ProblemSolve() {
 
     useEffect(() => {
         setLoading(true);
-        axios.get(`http://localhost:5001/api/company/company-questions/${id}`)
+        axios.get(`https://placementprepare.onrender.com/api/company/company-questions/${id}`)
             .then(res => {
                 setProblem(res.data.problemId); // problem details are inside problemId
                 setLoading(false);
@@ -37,7 +37,7 @@ export default function ProblemSolve() {
 
         try {
             const res = await axios.post(
-                "http://localhost:5001/api/submissions",
+                "https://placementprepare.onrender.com/api/submissions",
                 {
                     problemId: problem._id,
                     code,

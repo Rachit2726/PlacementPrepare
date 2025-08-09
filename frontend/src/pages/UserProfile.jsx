@@ -8,12 +8,12 @@ export default function UserProfile() {
 
     useEffect(() => {
         // Fetch profile data
-        axios.get('http://localhost:5001/api/profile', {
+        axios.get('https://placementprepare.onrender.com/api/profile', {
             headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }
         }).then(res => setProfile(res.data));
 
         // Fetch submission history
-        axios.get('http://localhost:5001/api/history', {
+        axios.get('https://placementprepare.onrender.com/api/history', {
             headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }
         }).then(res => setSubs(res.data));
     }, []);

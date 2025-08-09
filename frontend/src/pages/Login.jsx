@@ -14,7 +14,7 @@ export default function Login() {
 
     const login = async () => {
         try {
-            const res = await axios.post('http://localhost:5001/api/auth/login', { email, password });
+            const res = await axios.post('https://placementprepare.onrender.com/api/auth/login', { email, password });
 
             // Store token + role
             localStorage.setItem('token', res.data.token);

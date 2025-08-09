@@ -52,7 +52,7 @@ export default function AdminDashboard() {
             tags: problem.tags.split(',').map(t => t.trim())
         };
         try {
-            await axios.post('http://localhost:5001/api/admin/add-problem', payload, {
+            await axios.post('https://placementprepare.onrender.com/api/company/admin/add-problem', payload, {
                 headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }
             });
             alert("Problem Added");

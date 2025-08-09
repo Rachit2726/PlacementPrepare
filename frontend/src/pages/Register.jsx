@@ -10,7 +10,7 @@ export default function Register() {
 
     const register = async () => {
         try {
-            const res = await axios.post('http://localhost:5001/api/auth/register', {
+            const res = await axios.post('https://placementprepare.onrender.com/api/auth/register', {
                 username, email, password
             });
             localStorage.setItem('token', res.data.token);
