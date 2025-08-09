@@ -1,0 +1,57 @@
+/* src/pages/CompanyQuestions.css */
+
+.company-questions-container {
+    padding: 30px;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    min-height: 100vh;
+    color: white;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.company-questions-container h1 {
+    color: #ff6ec4;
+    font-weight: bold;
+    margin-bottom: 25px;
+    font-size: 2rem;
+    text-align: center;
+    text-shadow: 0 0 12px #ff6ec4;
+}
+
+.company-questions-container ul {
+    list-style: none;
+    padding-left: 0;
+    max-width: 700px;
+    margin: 0 auto;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 20px rgba(255, 110, 196, 0.4);
+}
+
+.company-questions-container li {
+    padding: 15px 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    font-size: 1.1rem;
+    color: #ffd700;
+    transition: background 0.3s ease, color 0.3s ease;
+}
+
+.company-questions-container li:last-child {
+    border-bottom: none;
+}
+
+.company-questions-container li a {
+    color: #ffd700;
+    text-decoration: none;
+    display: block;
+    width: 100%;
+    user-select: none;
+}
+
+.company-questions-container li a:hover {
+    color: #ff6ec4;
+    font-weight: 700;
+    background: transparent;
+    box-shadow: none;
+    transform: none;
+}

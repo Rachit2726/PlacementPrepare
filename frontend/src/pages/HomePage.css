@@ -1,0 +1,59 @@
+/* src/pages/HomePage.css */
+.home-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+    text-align: center;
+    animation: fadeIn 1.5s ease-in;
+}
+
+.title {
+    font-size: 4rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.title span {
+    color: #ff6ec4;
+    animation: bounce 1.2s infinite alternate;
+}
+
+.tagline {
+    font-size: 1.5rem;
+    margin: 20px 0;
+}
+
+.tagline span {
+    color: #ffd700;
+    font-weight: bold;
+}
+
+.start-btn {
+    padding: 12px 24px;
+    font-size: 1.2rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6ec4;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+}
+
+.start-btn:hover {
+    background-color: #ff3cac;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(-20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+    from { transform: translateY(0); }
+    to { transform: translateY(-10px); }
+}

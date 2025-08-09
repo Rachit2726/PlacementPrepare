@@ -1,0 +1,97 @@
+/* ProblemList.css */
+.problem-page {
+  padding: 60px 30px;
+  min-height: 100vh;
+  background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+  color: white;
+  font-family: 'Segoe UI', sans-serif;
+  animation: fadeIn 1.5s ease-in;
+}
+
+.problem-title {
+  font-size: 3rem;
+  font-weight: bold;
+  color: #fff;
+  margin-bottom: 40px;
+  text-align: center;
+}
+
+.problem-title::after {
+  content: ' 🚀';
+  animation: bounce 1s infinite alternate;
+}
+
+.problem-list-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 25px;
+  padding: 0;
+  list-style: none;
+}
+
+.problem-card {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid #444;
+  border-radius: 12px;
+  padding: 20px 25px;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  text-align: left;
+}
+
+.problem-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 0 12px #ff6ec4, 0 0 24px #ffd70044;
+}
+
+.problem-link {
+  text-decoration: none;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.problem-link h3 {
+  font-size: 1.2rem;
+  margin: 0;
+}
+
+.difficulty {
+  padding: 6px 12px;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 0.85rem;
+  text-transform: uppercase;
+}
+
+.difficulty.easy {
+  background-color: #4caf50;
+  color: white;
+}
+
+.difficulty.medium {
+  background-color: #ffa500;
+  color: white;
+}
+
+.difficulty.hard {
+  background-color: #f44336;
+  color: white;
+}
+
+.problem-empty {
+  text-align: center;
+  font-size: 1.2rem;
+  color: #ccc;
+}
+
+/* Animations */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes bounce {
+  from { transform: translateY(0); }
+  to { transform: translateY(-10px); }
+}

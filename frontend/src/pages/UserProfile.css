@@ -1,0 +1,176 @@
+/* Full width profile page with good spacing, clean & professional */
+
+.profile-page {
+    min-height: 100vh;
+    padding: 60px 8vw;
+    background: linear-gradient(135deg, #1a1a40, #3b3a72);
+    color: #f0f0f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    gap: 40px;
+}
+
+.profile-header {
+    text-align: center;
+    user-select: none;
+}
+
+.profile-header h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: #e75480;
+    text-shadow: 0 0 12px #e75480cc;
+    margin-bottom: 6px;
+}
+
+.username-highlight {
+    text-transform: capitalize;
+    border-bottom: 3px solid #ff6ec4;
+    padding-bottom: 4px;
+}
+
+.profile-subtitle {
+    font-size: 1.25rem;
+    color: #ccc;
+    font-weight: 500;
+}
+
+.profile-stats {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    gap: 30px;
+}
+
+.stat-block {
+    flex: 1 1 200px;
+    background: rgba(255, 110, 196, 0.15);
+    padding: 20px 30px;
+    border-radius: 12px;
+    text-align: center;
+    box-shadow: 0 0 20px rgba(231, 84, 128, 0.4);
+    transition: transform 0.3s ease;
+    cursor: default;
+}
+
+.stat-block:hover {
+    transform: scale(1.05);
+    box-shadow: 0 0 30px rgba(231, 84, 128, 0.7);
+}
+
+.stat-block h3 {
+    font-size: 1.3rem;
+    margin-bottom: 12px;
+    font-weight: 600;
+    color: #ffd953;
+    user-select: text;
+}
+
+.stat-block p {
+    font-size: 2rem;
+    font-weight: 700;
+    color: white;
+    user-select: text;
+}
+
+.profile-motivation {
+    max-width: 720px;
+    margin: 0 auto;
+    font-size: 1.2rem;
+    font-weight: 500;
+    color: #ddd;
+    line-height: 1.5;
+    text-align: center;
+    user-select: none;
+}
+
+/* Loading text style */
+.loading-text {
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    color: #e75480;
+    font-size: 1.5rem;
+    font-weight: 600;
+    user-select: none;
+}
+
+/* Submission History Container */
+.submission-history {
+    margin-top: 2rem;
+    padding: 1.5rem;
+    background: #ffffff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.05);
+}
+
+/* Title */
+.submission-history h2 {
+    font-size: 1.4rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #333;
+    border-left: 4px solid #4cafef;
+    padding-left: 10px;
+}
+
+/* Table styling */
+.submission-history table {
+    width: 100%;
+    border-collapse: collapse;
+    font-size: 0.95rem;
+}
+
+/* Table Header */
+.submission-history thead {
+    background-color: #f4f6f8;
+}
+
+.submission-history th {
+    text-align: left;
+    padding: 0.8rem;
+    font-weight: 600;
+    color: #555;
+}
+
+/* Table Rows */
+.submission-history td {
+    padding: 0.8rem;
+    border-top: 1px solid #e0e0e0;
+    color: #444;
+}
+
+/* Hover effect */
+.submission-history tbody tr:hover {
+    background-color: #f9fbfd;
+    transition: background 0.2s ease-in-out;
+}
+
+/* Verdict styling */
+.verdict {
+    font-weight: bold;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+.verdict.Accepted {
+    color: #2e7d32;
+    background: #e8f5e9;
+}
+
+.verdict.Wrong {
+    color: #c62828;
+    background: #ffebee;
+}
+
+.verdict.RuntimeError {
+    color: #ef6c00;
+    background: #fff3e0;
+}
+
+.verdict.TimeLimit {
+    color: #6a1b9a;
+    background: #f3e5f5;
+}

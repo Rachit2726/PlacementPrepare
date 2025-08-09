@@ -1,0 +1,124 @@
+/* src/pages/ProblemSolve.css */
+
+.solve-layout {
+    display: flex;
+    flex-direction: row;
+    height: 100vh;
+    background: linear-gradient(135deg, #0f0c29, #302b63, #24243e);
+    color: white;
+}
+
+.problem-panel, .editor-panel {
+    flex: 1;
+    padding: 30px;
+    overflow-y: auto;
+}
+
+.glass {
+    background: rgba(255, 255, 255, 0.05);
+    border-radius: 12px;
+    margin: 20px;
+    backdrop-filter: blur(10px);
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.1);
+}
+
+.meta {
+    display: flex;
+    justify-content: space-between;
+    margin: 10px 0;
+    font-size: 0.9rem;
+    color: #ffd700;
+}
+
+.difficulty {
+    padding: 3px 10px;
+    border-radius: 5px;
+    font-weight: bold;
+    background-color: #444;
+}
+
+.difficulty.easy {
+    background-color: #28a745;
+}
+
+.difficulty.medium {
+    background-color: #ffc107;
+    color: black;
+}
+
+.difficulty.hard {
+    background-color: #dc3545;
+}
+
+.section {
+    margin-top: 20px;
+}
+
+.section h3 {
+    margin-bottom: 5px;
+    color: #ff6ec4;
+}
+
+.section pre {
+    background-color: rgba(0, 0, 0, 0.4);
+    padding: 10px;
+    border-radius: 6px;
+    white-space: pre-wrap;
+    font-size: 0.95rem;
+}
+
+.lang-select {
+    margin-bottom: 10px;
+}
+
+select {
+    padding: 6px 12px;
+    margin-left: 10px;
+    background: #282c34;
+    color: white;
+    border: 1px solid #ccc;
+    border-radius: 6px;
+}
+
+.submit-btn {
+    margin-top: 15px;
+    padding: 12px 24px;
+    font-size: 1.1rem;
+    border: none;
+    border-radius: 8px;
+    background-color: #ff6ec4;
+    color: white;
+    cursor: pointer;
+    transition: background 0.3s ease;
+    width: 100%;
+}
+
+.submit-btn:hover {
+    background-color: #ff3cac;
+}
+
+.verdict {
+    margin-top: 20px;
+    padding: 10px;
+    background: #1e1e2e;
+    border-radius: 8px;
+}
+
+.verdict-text {
+    font-weight: bold;
+}
+
+.verdict-text.accepted {
+    color: #00ff8c;
+}
+
+.verdict-text.wrong {
+    color: #ff4d4f;
+}
+
+.loading-text {
+    color: #ccc;
+    text-align: center;
+    font-size: 1.2rem;
+    margin-top: 100px;
+}

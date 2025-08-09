@@ -1,0 +1,100 @@
+.company-list-container {
+    padding: 40px 20px;
+    background: linear-gradient(135deg, #1a1a40, #3b3a72, #25254a);
+    min-height: 100vh;
+    color: #f0f0f5;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    user-select: none;
+    width: 100vw;
+    /* Full viewport width */
+    box-sizing: border-box;
+    /* Include padding in width */
+}
+
+.company-list-container h2 {
+    color: #e75480;
+    font-weight: 700;
+    margin-bottom: 30px;
+    font-size: 2.5rem;
+    text-align: center;
+    text-shadow: 0 0 15px #e75480cc;
+    letter-spacing: 1.2px;
+    width: 100%;
+}
+
+.company-list-container ul {
+    list-style: none;
+    padding-left: 50;
+    margin: 0;
+    border-radius: 0;
+    /* no border radius since full width */
+    background: transparent;
+    /* transparent bg */
+    backdrop-filter: none;
+    box-shadow: none;
+
+    display: flex;
+    flex-wrap: wrap;
+    /* allow wrapping */
+    gap: 16px;
+    /* spacing between items */
+    justify-content: flex-start;
+    /* align left */
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.company-list-container li {
+    flex: 0 1 140px;
+    /* base width 140px, flexible shrinking */
+    padding: 14px 18px;
+    font-size: 1.15rem;
+    color: #ffd953;
+    font-weight: 600;
+    cursor: pointer;
+    text-align: center;
+    border-radius: 12px;
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 12px rgba(231, 84, 128, 0.3);
+    transition:
+        background 0.3s ease,
+        color 0.3s ease,
+        transform 0.25s ease,
+        box-shadow 0.3s ease;
+    user-select: none;
+}
+
+.company-list-container li:hover,
+.company-list-container li:focus {
+    background: #e75480;
+    color: white;
+    box-shadow: 0 0 14px #e75480cc;
+    transform: scale(1.07);
+    outline: none;
+}
+
+.company-list-container li:active {
+    transform: scale(0.98);
+    box-shadow: 0 0 8px #b3355acc;
+}
+
+.company-search-input {
+    width: 100%;
+    max-width: 480px;
+    padding: 10px 15px;
+    margin: 0 auto 50px auto;
+    display: block;
+    border-radius: 8px;
+    border: none;
+    font-size: 1rem;
+    box-shadow: 0 0 10px rgba(231, 84, 128, 0.3);
+    outline: none;
+    transition: box-shadow 0.3s ease;
+}
+
+.company-search-input:focus {
+    box-shadow: 0 0 14px #e75480cc;
+}
