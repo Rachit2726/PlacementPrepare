@@ -12,11 +12,21 @@ const app = express();
 const PORT = process.env.PORT || 5001;
 
 // Middleware
+const allowedOrigins = ['http://localhost:3000', 'https://placementprepare-1.onrender.com'];
+
 app.use(cors({
-    origin: 'http://localhost:3000', // React frontend URL
+    origin: function (origin, callback) {
+        if (!origin) return callback(null, true);  // allow non-browser requests like Postman
+        if (allowedOrigins.indexOf(origin) === -1) {
+            const msg = 'The CORS policy for this site does not allow access from the specified Origin.';
+            return callback(new Error(msg), false);
+        }
+        return callback(null, true);
+    },
     methods: ['GET', 'POST', 'PUT', 'DELETE'],
-    credentials: true
+    credentials: true,
 }));
+
 app.use(express.json());
 
 // Routes import
