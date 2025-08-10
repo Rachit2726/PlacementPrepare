@@ -19,7 +19,7 @@ export default function AdminDashboard() {
     useEffect(() => {
         const fetchStats = async () => {
             try {
-                const res = await axios.get('http://localhost:5001/api/admin/dashboard-stats', {
+                const res = await axios.get('https://placementprepare.onrender.com/api/admin/dashboard-stats', {
                     headers: { Authorization: 'Bearer ' + localStorage.getItem('token') }
                 });
                 setStats(res.data);
